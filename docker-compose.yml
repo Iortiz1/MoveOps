@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    container_name: moveops-backend
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
